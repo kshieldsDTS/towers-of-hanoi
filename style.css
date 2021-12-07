@@ -1,3 +1,53 @@
 body {
+    background-color: darkslateblue;
     text-align: center;
+    color: white;
+}
+h2 {
+    padding-bottom: 125px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.arena {
+    display: flex;
+}
+[data-tower] {
+    display: flex;
+    transform: rotate(-90deg);
+    align-items: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    border-radius: 10px;
+    background: darkslategray;
+    box-shadow: 0 0 4px 2px black;
+}
+[data-ring] {
+	width: 40px;
+	/* float: left; */
+}
+[data-ring='1'] {
+	height: 45px;
+	background-color: yellow;
+}
+[data-ring='2'] {
+	height: 70px;
+	background-color: red;
+}
+[data-ring='3'] {
+	height: 95px;
+	background-color: green;
+}
+[data-ring='4'] {
+	height: 120px;
+	background-color: blue;
+}
+[data-ring] {
+    display: flex;
+    border-radius: 20px;
+    position: relative;
 }
