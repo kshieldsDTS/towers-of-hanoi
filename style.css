@@ -1,10 +1,11 @@
+/* CSS design inspired by annie tran at https://codepen.io/nntrn/pen/WLrEwM */
 body {
     background-color: darkslateblue;
     text-align: center;
     color: white;
 }
 h2 {
-    padding-bottom: 125px;
+    margin-bottom: 125px;
 }
 .container {
     display: flex;
@@ -14,6 +15,9 @@ h2 {
 }
 .arena {
     display: flex;
+    margin: auto;
+    height: 600px;
+    width: 600px;
 }
 [data-tower] {
     display: flex;
@@ -25,10 +29,11 @@ h2 {
     border-radius: 10px;
     background: darkslategray;
     box-shadow: 0 0 4px 2px black;
+    top: 200px
 }
 [data-ring] {
 	width: 40px;
-	/* float: left; */
+	float: left;
 }
 [data-ring='1'] {
 	height: 45px;
@@ -46,8 +51,15 @@ h2 {
 	height: 120px;
 	background-color: blue;
 }
-[data-ring] {
+.ring {
     display: flex;
     border-radius: 20px;
     position: relative;
+    box-shadow: 0 0 2px 2px black;
+}
+/* .selected {
+    left: 50px;
+} */
+[data-ring='5'] {
+    display: none;
 }

@@ -8,20 +8,23 @@
     <title>Towers of Hanoi</title>
 </head>
 <body>
-    <div>
-        <h1>Towers of Hanoi</h1>
-        <h2 class='moves'>Number of Moves: 0</h2>
-    </div>
+    <!-- <h1>Towers of Hanoi</h1> -->
+    <!-- <h2 class='moves'>Number of Moves: 0</h2> -->
     <div class="container">
         <div class="arena">
-            <div data-tower="1">
-                <div data-ring="4"></div>
-                <div data-ring="3"></div>
-                <div data-ring="2"></div>
-                <div data-ring="1"></div>
+            <div class='tower' data-tower="1">
+                <div class='ring' data-ring="5"></div>
+                <div class='ring' data-ring="4"></div>
+                <div class='ring' data-ring="3"></div>
+                <div class='ring' data-ring="2"></div>
+                <div class='ring' data-ring="1"></div>
             </div>
-            <div data-tower="2"></div>
-            <div data-tower="3"></div>
+            <div class='tower' data-tower="2">
+                <div class='ring' data-ring="5"></div>
+            </div>    
+            <div class='tower' data-tower="3">
+                <div class='ring' data-ring="5"></div>
+            </div>    
         </div>
     </div>
     <div id="winner"></div>
