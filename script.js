@@ -62,3 +62,20 @@ function selectTarget(event) {
     }
     checkWinConditions();
 }
+function init (){
+    for (let i=1; i<6; i++) {
+        let ring = document.querySelector(`[data-ring = "${i}"]`);
+        ring.remove();
+    }
+    for (let i=5; i>=1; i--) {
+        let newRing = document.createElement('div');
+        let towerOne = document.querySelector('.tower')
+        newRing.classList.add('ring');
+        newRing.dataset['ring'];
+        newRing.dataset.ring = i;
+        towerOne.appendChild(newRing);
+    }
+    banner.innerText = ' ';
+    movesCounter.innerText = ' ';
+    movesTaken = 0;
+}
