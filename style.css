@@ -1,8 +1,16 @@
 /* CSS design inspired by annie tran at https://codepen.io/nntrn/pen/WLrEwM */
+html {
+    width: 100%;
+    height: 100%;
+}
 body {
-    background-color: darkslateblue;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 51%, rgba(2,0,36,1) 57%, rgba(0,203,255,1) 76%);
     text-align: center;
     color: white;
+}
+h1 {
+    transition: 1s;
 }
 h2 {
     transition: 1s;
@@ -41,19 +49,23 @@ h3 {
 }
 [data-ring='1'] {
 	height: 45px;
-	background-color: yellow;
+	background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
 }
 [data-ring='2'] {
 	height: 70px;
-	background-color: red;
+	background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(121,14,9,1) 29%, rgba(255,255,0,1) 100%);
 }
 [data-ring='3'] {
 	height: 95px;
-	background-color: green;
+	background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 29%, rgba(146,255,0,1) 100%);
 }
 [data-ring='4'] {
 	height: 120px;
-	background-color: blue;
+	background: rgb(2,0,36);
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(119,9,121,1) 29%, rgba(255,0,2,1) 100%);
 }
 .ring {
     display: flex;
