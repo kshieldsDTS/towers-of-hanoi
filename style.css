@@ -2,18 +2,13 @@
 html {
     width: 100%;
     height: 100%;
+    text-shadow: 1px 1px slategray;
 }
 body {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 51%, rgba(2,0,36,1) 57%, rgba(0,203,255,1) 76%);
     text-align: center;
     color: white;
-}
-h1 {
-    transition: 1s;
-}
-h2 {
-    transition: 1s;
 }
 h3 {
     margin-top: 50px;
@@ -43,6 +38,9 @@ h3 {
     box-shadow: 0 0 4px 2px black;
     top: 200px
 }
+.tower:hover {
+    box-shadow: 0 0 2px 2px rgba(0,203,255,1);
+}
 [data-ring] {
 	width: 40px;
 	float: left;
@@ -71,11 +69,14 @@ h3 {
     display: flex;
     border-radius: 20px;
     position: relative;
-    box-shadow: 0 0 2px 2px black;
 }
-/* .selected {
-    left: 50px;
-} */
+.ring:hover {
+    box-shadow: 0 0 2px 2px rgba(0,203,255,1);
+    transition: 0.5s
+}
+.selected {
+    box-shadow: 0 0 2px 2px rgba(0,203,255,1);
+}
 [data-ring='5'] {
     display: none;
 }
@@ -87,4 +88,43 @@ h3 {
 }
 .hidden {
     display: none;
+}
+button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5 5 black;
+}
+button:hover {
+    animation: 1s button-anim infinite;
+}
+h2, h3 {
+}
+.error {
+    color: pink;
+    text-shadow: 1px 1px red;
+    animation: 1s flash infinite;
+}
+@keyframes flash {
+    0% {
+        color: pink;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: pink;
+    }
+}
+@keyframes button-anim {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: darkred;
+    }
+    100% {
+        background-color: red;
+    }
 }

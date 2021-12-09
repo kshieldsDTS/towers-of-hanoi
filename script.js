@@ -1,7 +1,7 @@
 // CONSTANTS
-const banner = document.querySelector('h2');
+const movesCounter = document.querySelector('h2');
 const arena = document.querySelector('.arena');
-const movesCounter = document.querySelector('h3');
+const banner = document.querySelector('h3');
 const restart = document.querySelector('button');
 // VARIABLES
 let ringSelected = 0;
@@ -14,7 +14,6 @@ function checkWinConditions(){
     let winTower = document.querySelector('[data-tower = "3"]')
     if (winTower.children.length === 5) {
         banner.innerHTML = "<p>You win!</p>";
-        restart.classList.toggle('hidden')
     }
 }
 function handleClick(event) {
@@ -22,8 +21,9 @@ function handleClick(event) {
         if (ringSelected === 0) {
 			selectRing(event); 
         } else {
+            banner.classList.add('error')
             banner.innerText = 'You already have a token selected!'
-            setTimeout(() => banner.innerText='', 2000);
+            setTimeout(() =>(banner.innerText ='Move the rings to the tower on the right!', banner.classList.remove('error')),3000);
         }
     }
     if (event.target.classList.contains('tower')){
@@ -37,8 +37,9 @@ function selectRing(event) {
         chosenRing.style.left = '50px';
         ringSelected = 1;
     } else {
+        banner.classList.add('error')
         banner.innerText = 'You must select a ring from the top of the tower!'
-        setTimeout(() => banner.innerText='', 2000)
+        setTimeout(() =>(banner.innerText = 'Move the rings to the tower on the right!', banner.classList.remove('error')),3000);
     }
     
 }
@@ -57,8 +58,9 @@ function selectTarget(event) {
         movesTaken = movesTaken+1;
         movesCounter.innerText = `Moves Taken: ${movesTaken}`;
     } else {
+        banner.classList.add('error')
         banner.innerText = 'You cannot place a larger ring on top of a smaller ring!'
-        setTimeout(() => banner.innerText='', 2000);
+        setTimeout(() => (banner.innerText = 'Move the rings to the tower on the right!', banner.classList.remove('error')), 3000);
     }
     checkWinConditions();
 }
@@ -75,7 +77,7 @@ function init (){
         newRing.dataset.ring = i;
         towerOne.appendChild(newRing);
     }
-    banner.innerText = ' ';
-    movesCounter.innerText = ' ';
+    banner.innerText = 'Move the rings to the tower on the right!';
+    movesCounter.innerText = 'Moves Taken: 0';
     movesTaken = 0;
 }
