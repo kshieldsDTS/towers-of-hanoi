@@ -40,6 +40,7 @@ h3 {
 }
 .tower:hover {
     box-shadow: 0 0 2px 2px rgba(0,203,255,1);
+    transition: 0.5s;
 }
 [data-ring] {
 	width: 40px;
@@ -90,7 +91,7 @@ h3 {
     display: none;
 }
 button {
-    background-color: red;
+    background-color: darkred;
     color: white;
     padding: 10px;
     border-radius: 10px;
@@ -119,12 +120,12 @@ h2, h3 {
 }
 @keyframes button-anim {
     0% {
-        background-color: red;
-    }
-    50% {
         background-color: darkred;
     }
-    100% {
+    50% {
         background-color: red;
+    }
+    100% {
+        background-color: darkred;
     }
 }
