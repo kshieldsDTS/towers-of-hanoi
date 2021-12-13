@@ -4,6 +4,8 @@
 
 A browser-based Towers of Hanoi game coded in JavaScript, HTML, and CSS.
 
+![Towers of Hanoi Game](assets/towers-of-hanoi.png)
+
 ## Planning
 <ul>
     <li>Build out the framework in index.html, script.js, and style.css.</li>
